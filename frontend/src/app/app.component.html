@@ -1,0 +1,18 @@
+<ion-app>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>
+
+<!-- Add navigation -->
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button routerLinkActive="tab-selected" routerLink="/home" tab="home">
+      <ion-icon name="list-outline"></ion-icon>
+      <ion-label>Game List</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button routerLinkActive="tab-selected" routerLink="/create" tab="create">
+      <ion-icon name="game-controller-outline"></ion-icon>
+      <ion-label>Add Game</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

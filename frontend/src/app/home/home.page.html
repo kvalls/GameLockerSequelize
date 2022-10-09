@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      GameLocker
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">GameLocker</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- <div id="container"> -->
+    <ion-list>
+      <ion-item *ngFor="let game of Games">
+        <ion-label>
+          <h2>{{game.name}} {{game.price}}€</h2>
+          <h3> Genre: {{game.genre}} </h3>
+          <h3> Sales: {{game.sales}} </h3>
+          <p> {{game.description}} </p>
+        </ion-label>
+  
+        <div class="item-note" item-end>
+          <button ion-button clear [routerLink]="['/update/', game.id]">
+            <ion-icon name="create" style="zoom:1.5"></ion-icon>
+          </button>
+          <button ion-button clear (click)="removeGame(game)">
+            <ion-icon name="trash" style="zoom:1.5"></ion-icon>
+          </button>
+        </div>
+      </ion-item>
+    </ion-list>
+  <!-- </div> -->
+  
+
+</ion-content>
