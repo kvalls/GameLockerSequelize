@@ -1,6 +1,10 @@
-# Ionic + Express + Sequelize + Multer Example
+# Game Locker
 
-This is a basic example using Ionic + Express + Sequelize + Multer that shows how to upload/download images using Multer.
+This project was made as a full-stack app to let you create your own library of games.
+
+# Ionic + Express + Sequelize + Multer
+
+Using Ionic + Express + Sequelize + Multer to upload/download images.
 
 It captures images in Ionic, and pick photos up as well using Ionic Capacitor.
 
