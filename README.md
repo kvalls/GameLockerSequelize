@@ -38,8 +38,8 @@ Enjoy!
 
 ## Prerequisites
 
-* Visual Studio Code.
-* Ionic.
+* [Node.js](https://nodejs.org/en/download/) - To install the dependencies/modules of the project.
+* [MySQL Server + Workbench](https://www.mysql.com/downloads/) - This project requires a database.
 
 ## Built With
 
