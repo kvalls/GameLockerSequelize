@@ -49,4 +49,4 @@ Enjoy!
 ## PostMan Documentation
 
 Here you can check out how to test the API's CRUD with Postman:
-https://documenter.getpostman.com/view/23478577/2s83tGoByT
+https://documenter.getpostman.com/view/23478577/2s83ziNNyS
