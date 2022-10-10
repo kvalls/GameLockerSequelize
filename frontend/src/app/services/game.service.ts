@@ -20,15 +20,15 @@ export class GameService {
 
   constructor(private httpClient: HttpClient) { }
 
-  createGame(game: Game, blob): Observable<any> {
-    let data= new URLSearchParams();
+  createGame(game, blob): Observable<any> {
+    let data = new FormData();
     data.append("name",game.name);
     data.append("price",game.price.toString());
     data.append("genre",game.genre);
     data.append("description",game.description);
     data.append("sales",game.sales.toString());
     data.append("file",blob);
-    return this.httpClient.post<Game>(this.endpoint, data,httpOptionsUsingUrlEncoded)
+    return this.httpClient.post(this.endpoint, data)
       .pipe(
         catchError(this.handleError<Game>('Error occured'))
       );
@@ -50,15 +50,15 @@ export class GameService {
       );
   }
 
-  updateGame(id, game: Game, blob): Observable<any> {
-    let data= new URLSearchParams();
+  updateGame(id, game, blob): Observable<any> {
+    let data = new FormData();
     data.append("name",game.name);
     data.append("price",game.price.toString());
     data.append("genre",game.genre);
     data.append("description",game.description);
     data.append("sales",game.sales.toString());
     data.append("file",blob);
-    return this.httpClient.put(this.endpoint + '/' + id, data,httpOptionsUsingUrlEncoded)
+    return this.httpClient.put(this.endpoint + '/' + id, data)
       .pipe(
         tap(_ => console.log(`Game updated: ${id}`)),
         catchError(this.handleError<Game[]>('Update game'))

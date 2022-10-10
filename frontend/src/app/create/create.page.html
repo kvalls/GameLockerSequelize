@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-    <ion-grid>
+  <ion-grid>
     <ion-row class="ion-align-items-center">
       <ion-col size="6">
         <ion-img class="photo-frame" *ngIf="capturedPhoto" [src]="capturedPhoto" (click)="takePhoto()"></ion-img>
@@ -32,18 +32,18 @@
     <form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
       <ion-item>
         <ion-label position="floating">Name</ion-label>
-        <ion-input  formControlName="name" type="text" required></ion-input>
+        <ion-input formControlName="name" type="text" required></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Price</ion-label>
-        <ion-input  formControlName="price" type="text" required>
+        <ion-input formControlName="price" type="text" required>
         </ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label position="floating">Genre</ion-label>
-        <ion-input  formControlName="genre" type="text" required>
+        <ion-input formControlName="genre" type="text" required>
         </ion-input>
       </ion-item>
 

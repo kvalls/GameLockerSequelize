@@ -5,7 +5,7 @@ const Op = db.Sequelize.Op;
 // Create and Save a new Game
 exports.create = (req, res) => {
   // Validate request
-  if (!req.body.name || !req.body.price || !req.body.genre || !req.body.description || !req.body.sales) {
+  if (!req.body.name || !req.body.price || !req.body.genre) {
     res.status(400).send({
       message: "Content cannot be empty!"
     });
@@ -65,7 +65,7 @@ exports.findOne = (req, res) => {
 // Update a Game by the id in the request
 exports.update = (req, res) => {
   // Validate request
-  if (!req.body.name || !req.body.price || !req.body.genre || !req.body.description || !req.body.sales) {
+  if (!req.body.name || !req.body.price || !req.body.genre) {
     res.status(400).send({
       message: "Content cannot be empty!"
     });

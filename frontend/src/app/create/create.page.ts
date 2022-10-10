@@ -75,8 +75,7 @@ export class CreatePage implements OnInit {
         blob = await response.blob();
       }
       console.log()
-      this.gameService.createGame(this.gameForm.value, blob)
-        .subscribe((response) => {
+      this.gameService.createGame(this.gameForm.value, blob).subscribe((response) => {
           this.zone.run(() => {
             this.gameForm.reset();
             this.router.navigate(['/home']);
