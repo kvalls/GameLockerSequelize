@@ -18,7 +18,7 @@ exports.create = (req, res) => {
     genre: req.body.genre,
     description: req.body.description,
     sales: req.body.sales,
-    image: req.file ? req.file.image : ""
+    filename: req.file ? req.file.filename : ""
   }
 
   // Save Game in the database
@@ -78,7 +78,7 @@ exports.update = (req, res) => {
     genre: req.body.genre,
     description: req.body.description,
     sales: req.body.sales,
-    image: req.file ? req.file.image : ""
+    filename: req.file ? req.file.filename : ""
   }
   const id = req.params.id;
   Game.update(game, {

@@ -15,9 +15,11 @@ module.exports = (sequelize, Sequelize) => {
     sales: {
       type: Sequelize.INTEGER
     },
-    image: {
+    filename: {
       type: Sequelize.STRING
-    }
+    },
+  },{
+    timestamps: false
   });
 
   return Game;

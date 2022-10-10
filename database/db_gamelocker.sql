@@ -18,32 +18,32 @@ USE `db_gamelocker`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `game`
+-- Table structure for table `games`
 --
 
-DROP TABLE IF EXISTS `game`;
+DROP TABLE IF EXISTS `games`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `game` (
+CREATE TABLE `games` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   `price` decimal(3,2) NOT NULL,
   `genre` varchar(45) NOT NULL,
   `description` varchar(300) DEFAULT NULL,
   `sales` int DEFAULT NULL,
-  `image` varchar(255) DEFAULT NULL,
+  `filename` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `game`
+-- Dumping data for table `games`
 --
 
-LOCK TABLES `game` WRITE;
-/*!40000 ALTER TABLE `game` DISABLE KEYS */;
-INSERT INTO `game` VALUES (1,'Half-Life 2',8.19,'FPS','Pick up the crowbar of research scientist Gordon Freeman, who finds himself on an alien-infested Earth being picked to the bone, its resources depleted, its populace dwindling. Freeman is thrust into the unenviable role of rescuing the world from the wrong he unleashed back at Black Mesa.',20000000,NULL),(2,'Garry\'s Mod',9.99,'Sandbox','This is a description',20,NULL),(4,'Test ',9.99,'asd','asdsadsad',NULL,NULL);
-/*!40000 ALTER TABLE `game` ENABLE KEYS */;
+LOCK TABLES `games` WRITE;
+/*!40000 ALTER TABLE `games` DISABLE KEYS */;
+INSERT INTO `games` VALUES (1,'Half-Life 2',8.19,'FPS','Pick up the crowbar of research scientist Gordon Freeman, who finds himself on an alien-infested Earth being picked to the bone, its resources depleted, its populace dwindling. Freeman is thrust into the unenviable role of rescuing the world from the wrong he unleashed back at Black Mesa.',20000000,NULL),(2,'Garry\'s Mod',9.99,'Sandbox','This is a description',20,NULL),(4,'Test ',9.99,'asd','asdsadsad',NULL,NULL);
+/*!40000 ALTER TABLE `games` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -55,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-09 22:52:37
+-- Dump completed on 2022-10-10  1:20:09

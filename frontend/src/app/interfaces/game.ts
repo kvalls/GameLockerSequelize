@@ -5,5 +5,5 @@ export class Game {
   genre: string;
   description?: string;
   sales?: number;
-  image?: string;
+  filename?: string;
 }

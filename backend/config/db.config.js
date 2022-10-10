@@ -4,6 +4,9 @@ module.exports = {
   PASSWORD: "passkris",
   DB: "db_gamelocker",
   dialect: "mysql",
+  define: {
+    timestamps: false
+  },
   pool: {
     max: 5,
     min: 0,

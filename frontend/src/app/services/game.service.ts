@@ -27,7 +27,7 @@ export class GameService {
     data.append("genre",game.genre);
     data.append("description",game.description);
     data.append("sales",game.sales.toString());
-    data.append("image",blob);
+    data.append("file",blob);
     return this.httpClient.post<Game>(this.endpoint, data,httpOptionsUsingUrlEncoded)
       .pipe(
         catchError(this.handleError<Game>('Error occured'))
@@ -57,7 +57,7 @@ export class GameService {
     data.append("genre",game.genre);
     data.append("description",game.description);
     data.append("sales",game.sales.toString());
-    data.append("image",blob);
+    data.append("file",blob);
     return this.httpClient.put(this.endpoint + '/' + id, data,httpOptionsUsingUrlEncoded)
       .pipe(
         tap(_ => console.log(`Game updated: ${id}`)),
